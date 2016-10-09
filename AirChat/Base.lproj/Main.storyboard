@@ -1,26 +1,66 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XNP-PT-iBo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="vMn-kB-a59">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="XNP-PT-iBo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sS4-Dp-302">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.78823529411764703" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.78823529411764703" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MGY-tP-5VJ" kind="relationship" relationship="viewControllers" id="BLI-9S-pDq"/>
+                        <segue destination="RfC-wX-EdZ" kind="relationship" relationship="viewControllers" id="vIq-F6-sQT"/>
+                        <segue destination="Lyg-Bp-ZeC" kind="relationship" relationship="viewControllers" id="u0b-NV-1yd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xa2-mj-u2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1662" y="-200"/>
+        </scene>
+        <!--ACVisitingCard-->
+        <scene sceneID="jbo-ul-6qY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ACVisitingCard" id="MGY-tP-5VJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="名片" image="VisitingCard" id="SrV-zO-7O6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQ7-31-R69" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="-488"/>
+        </scene>
+        <!--ACDocuments-->
+        <scene sceneID="YmN-lx-foh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ACDocuments" id="RfC-wX-EdZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="文件" image="Documents" id="EYr-eD-8qH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYc-hl-YWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="-201"/>
+        </scene>
+        <!--ACChat-->
+        <scene sceneID="8e5-RO-68s">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ACChat" id="Lyg-Bp-ZeC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="聊天" image="Chat" id="eE2-sP-Nmb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgE-66-cLn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Chat" width="30" height="30"/>
+        <image name="Documents" width="30" height="30"/>
+        <image name="VisitingCard" width="30" height="30"/>
+    </resources>
 </document>
