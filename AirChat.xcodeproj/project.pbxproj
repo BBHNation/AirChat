@@ -7,33 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521073B61DA9DA7700B3D127 /* ACVisitingCardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073B51DA9DA7700B3D127 /* ACVisitingCardLayout.swift */; };
 		521073BC1DAA2D4900B3D127 /* ACOverallTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073BB1DAA2D4900B3D127 /* ACOverallTools.swift */; };
 		521073C01DAA300900B3D127 /* UIImage+ACImagePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 521073BF1DAA300900B3D127 /* UIImage+ACImagePlus.m */; };
+		521073C71DAB3B7700B3D127 /* ACVisitingCardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073C51DAB3B7700B3D127 /* ACVisitingCardLayout.swift */; };
+		521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073C61DAB3B7700B3D127 /* ACVisitingCardVC.swift */; };
+		521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073CB1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift */; };
 		5297B2E41DA888A200AA241A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297B2E31DA888A200AA241A /* AppDelegate.swift */; };
 		5297B2E91DA888A200AA241A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2E71DA888A200AA241A /* Main.storyboard */; };
 		5297B2EB1DA888A200AA241A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2EA1DA888A200AA241A /* Assets.xcassets */; };
 		5297B2EE1DA888A200AA241A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2EC1DA888A200AA241A /* LaunchScreen.storyboard */; };
-		5297B2FC1DA88AD600AA241A /* ACVisitingCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297B2FB1DA88AD600AA241A /* ACVisitingCardVC.swift */; };
 		5297B2FE1DA88CD200AA241A /* ACVisitingCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */; };
 		5297B3001DA88D6E00AA241A /* ACDocuments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */; };
 		5297B3021DA88D8100AA241A /* ACChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B3011DA88D8100AA241A /* ACChat.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		521073B51DA9DA7700B3D127 /* ACVisitingCardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardLayout.swift; sourceTree = "<group>"; };
 		521073B81DAA18DC00B3D127 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		521073BB1DAA2D4900B3D127 /* ACOverallTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACOverallTools.swift; sourceTree = "<group>"; };
 		521073BD1DAA300900B3D127 /* AirChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		521073BE1DAA300900B3D127 /* UIImage+ACImagePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ACImagePlus.h"; sourceTree = "<group>"; };
 		521073BF1DAA300900B3D127 /* UIImage+ACImagePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ACImagePlus.m"; sourceTree = "<group>"; };
+		521073C51DAB3B7700B3D127 /* ACVisitingCardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardLayout.swift; sourceTree = "<group>"; };
+		521073C61DAB3B7700B3D127 /* ACVisitingCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardVC.swift; sourceTree = "<group>"; };
+		521073CB1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5297B2E01DA888A200AA241A /* AirChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5297B2E31DA888A200AA241A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5297B2E81DA888A200AA241A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5297B2EA1DA888A200AA241A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5297B2ED1DA888A200AA241A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5297B2EF1DA888A200AA241A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5297B2FB1DA88AD600AA241A /* ACVisitingCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardVC.swift; sourceTree = "<group>"; };
 		5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACVisitingCard.storyboard; sourceTree = "<group>"; };
 		5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACDocuments.storyboard; sourceTree = "<group>"; };
 		5297B3011DA88D8100AA241A /* ACChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACChat.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,56 @@
 			);
 			name = Tools;
 			path = AirChat/Tools;
+			sourceTree = "<group>";
+		};
+		521073C11DAB3B7700B3D127 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				521073C21DAB3B7700B3D127 /* Add */,
+				521073C31DAB3B7700B3D127 /* Detail */,
+				521073C41DAB3B7700B3D127 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		521073C21DAB3B7700B3D127 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		521073C31DAB3B7700B3D127 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		521073C41DAB3B7700B3D127 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				521073CA1DAB3BB200B3D127 /* Views */,
+				521073C91DAB3BA900B3D127 /* Controllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		521073C91DAB3BA900B3D127 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				521073C61DAB3B7700B3D127 /* ACVisitingCardVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		521073CA1DAB3BB200B3D127 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				521073C51DAB3B7700B3D127 /* ACVisitingCardLayout.swift */,
+				521073CB1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		5297B2D71DA888A200AA241A = {
@@ -130,9 +182,8 @@
 		5297B2F81DA88A5B00AA241A /* VisitingCard */ = {
 			isa = PBXGroup;
 			children = (
+				521073C11DAB3B7700B3D127 /* Modules */,
 				5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */,
-				5297B2FB1DA88AD600AA241A /* ACVisitingCardVC.swift */,
-				521073B51DA9DA7700B3D127 /* ACVisitingCardLayout.swift */,
 			);
 			path = VisitingCard;
 			sourceTree = "<group>";
@@ -216,9 +267,10 @@
 			files = (
 				5297B2E41DA888A200AA241A /* AppDelegate.swift in Sources */,
 				521073BC1DAA2D4900B3D127 /* ACOverallTools.swift in Sources */,
-				5297B2FC1DA88AD600AA241A /* ACVisitingCardVC.swift in Sources */,
+				521073C71DAB3B7700B3D127 /* ACVisitingCardLayout.swift in Sources */,
 				521073C01DAA300900B3D127 /* UIImage+ACImagePlus.m in Sources */,
-				521073B61DA9DA7700B3D127 /* ACVisitingCardLayout.swift in Sources */,
+				521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */,
+				521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

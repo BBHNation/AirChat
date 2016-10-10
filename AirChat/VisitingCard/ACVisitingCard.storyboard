@@ -24,14 +24,15 @@
                                 <color key="backgroundColor" red="0.9024609375" green="0.9024609375" blue="0.9024609375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="SBa-cK-hNe" customClass="ACVisitingCardLayout" customModule="AirChat" customModuleProvider="target"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hXQ-m5-ehX">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hXQ-m5-ehX" customClass="ACVisitingCardCollectionViewCell" customModule="AirChat" customModuleProvider="target">
                                         <rect key="frame" x="7.5" y="0.0" width="360" height="179"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.5" tag="1024" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testBack" translatesAutoresizingMaskIntoConstraints="NO" id="mHp-6E-pJ4">
+                                                <imageView userInteractionEnabled="NO" tag="1024" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mHp-6E-pJ4">
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
                                                             <color key="value" red="0.39615234374999997" green="0.39615234374999997" blue="0.39615234374999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +57,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="mHp-6E-pJ4" secondAttribute="trailing" constant="10" id="BhG-tk-Izc"/>
                                             <constraint firstItem="8fi-zo-net" firstAttribute="top" secondItem="hXQ-m5-ehX" secondAttribute="topMargin" constant="17" id="OB9-bW-vxZ"/>
@@ -79,6 +80,9 @@
                                                 <size key="value" width="5" height="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="cardBackImage" destination="mHp-6E-pJ4" id="OYO-8d-zyS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -134,6 +138,5 @@
     <resources>
         <image name="PersonalCenter" width="30" height="30"/>
         <image name="VisitingCard" width="30" height="30"/>
-        <image name="testBack" width="429" height="220"/>
     </resources>
 </document>
