@@ -25,7 +25,7 @@
                                 <collectionViewLayout key="collectionViewLayout" id="SBa-cK-hNe" customClass="ACVisitingCardLayout" customModule="AirChat" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hXQ-m5-ehX" customClass="ACVisitingCardCollectionViewCell" customModule="AirChat" customModuleProvider="target">
-                                        <rect key="frame" x="7.5" y="0.0" width="360" height="179"/>
+                                        <rect key="frame" x="8" y="0.0" width="360" height="179"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="179"/>
@@ -93,9 +93,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="zIk-Cg-flw" secondAttribute="bottom" id="2eb-zi-n2m"/>
                             <constraint firstAttribute="trailing" secondItem="zIk-Cg-flw" secondAttribute="trailing" id="6aZ-Ay-7l6"/>
                             <constraint firstItem="zIk-Cg-flw" firstAttribute="leading" secondItem="ogG-XY-iuP" secondAttribute="leading" id="c7S-p9-r7Z"/>
+                            <constraint firstAttribute="bottom" secondItem="zIk-Cg-flw" secondAttribute="bottom" id="xaC-Iz-gUh"/>
                             <constraint firstItem="zIk-Cg-flw" firstAttribute="top" secondItem="ogG-XY-iuP" secondAttribute="top" id="zhU-jg-eYc"/>
                         </constraints>
                     </view>

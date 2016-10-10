@@ -6,8 +6,13 @@
 //  Copyright © 2016年 Binhan Bai. All rights reserved.
 //
 
+/*
+ *这里是工具扩展类
+ */
+
 import Foundation
 import UIKit
+
 extension UIImage{
     /**
      获取图片中的像素颜色值

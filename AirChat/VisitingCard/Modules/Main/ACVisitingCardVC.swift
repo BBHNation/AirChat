@@ -37,14 +37,12 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ACVisitingCardCollectionViewCell
-       
         if indexPath.row%2==0 {
             cell.cardBackImage.image = UIImage.init(imageLiteralResourceName: "testBack2")
         }
         else{
             cell.cardBackImage.image = UIImage.init(imageLiteralResourceName: "testBack")
         }
-        
         DispatchQueue.global().async {
             cell.cardMostColor = cell.cardBackImage.image?.mostColor()
         }
