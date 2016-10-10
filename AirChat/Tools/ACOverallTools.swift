@@ -34,3 +34,15 @@ extension UIImage{
         return UIColor.init(red: r, green: g, blue: b, alpha: a) 
     }
 }
+
+
+extension ACResideRootVC{
+    static var sharedResideRootVC:ACResideRootVC{
+        set{
+            
+        }
+        get{
+            return self.sharedResideRootVC
+        }
+    }
+}

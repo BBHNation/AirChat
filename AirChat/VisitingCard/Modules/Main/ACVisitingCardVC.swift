@@ -31,6 +31,10 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         return 1
     }
     
+    @IBAction func presentLeftMune(_ sender: AnyObject) {
+        let rootVC = UIApplication.shared.keyWindow?.rootViewController as! ACResideRootVC
+        rootVC.presentLeftMenuViewController()
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }

@@ -100,7 +100,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="名片" id="9oO-aZ-YeR">
-                        <barButtonItem key="leftBarButtonItem" image="PersonalCenter" id="aaR-QE-SF4"/>
+                        <barButtonItem key="leftBarButtonItem" image="PersonalCenter" id="aaR-QE-SF4">
+                            <connections>
+                                <action selector="presentLeftMune:" destination="m8q-UO-KoJ" id="n99-4F-XTk"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="7eC-J2-BTx"/>
                             <barButtonItem systemItem="search" id="n5a-3x-YDj"/>
@@ -117,7 +121,7 @@
         <!--名片-->
         <scene sceneID="Og1-iP-Fv6">
             <objects>
-                <navigationController id="mlt-rU-aLm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ACVisitingCard" id="mlt-rU-aLm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="名片" image="VisitingCard" id="mJp-kM-lHb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="AMm-7k-oed">
