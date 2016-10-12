@@ -10,11 +10,12 @@ import UIKit
 
 class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    var dataModel:ACVisitingCardDataModel!
     @IBOutlet weak var ACCardCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dataModel = ACVisitingCardDataModel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,21 +37,28 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         rootVC.presentLeftMenuViewController()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return dataModel.cardCellArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ACVisitingCardCollectionViewCell
+        cell.cardBackImage.image = (dataModel.cardCellArray.object(at: indexPath.row) as! ACVisitingCardCellModel).backImage
+        cell.cardMostColor = (dataModel.cardCellArray.object(at: indexPath.row) as! ACVisitingCardCellModel).backImageMostColor
+        /*
         if indexPath.row%2==0 {
-            cell.cardBackImage.image = UIImage.init(imageLiteralResourceName: "testBack2")
+            cell.cardMostColor = UIColor.blue
         }
         else{
-            cell.cardBackImage.image = UIImage.init(imageLiteralResourceName: "testBack")
+            cell.cardMostColor = UIColor.gray
         }
-        DispatchQueue.global().async {
-            cell.cardMostColor = cell.cardBackImage.image?.mostColor()
-        }
+ */
         return cell
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("select item at index \(indexPath.row)")
     }
     
     

@@ -9,7 +9,7 @@
 import UIKit
 
 class ACVisitingCardCollectionViewCell: UICollectionViewCell {
-    var cardMostColor:UIColor!
+    var cardMostColor:UIColor! 
     @IBOutlet weak var cardBackImage: UIImageView! {
         didSet{
             cardBackImage.layer.shadowColor = UIColor.black.cgColor

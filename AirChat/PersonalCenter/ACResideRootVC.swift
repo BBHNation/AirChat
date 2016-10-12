@@ -20,9 +20,7 @@ class ACResideRootVC: RESideMenu {
     }
     
     override func awakeFromNib(){
-        self.backgroundImage = UIImage.init(named: "testBack")
-//        self.menuPreferredStatusBarStyle = UIStatusBarStyleLightContent;
-//        self.menuPreferredStatusBarStyle = UIStatusBarStyleLightContent
+        self.backgroundImage = UIImage.init(named: "testBack2")
         self.contentViewShadowColor = UIColor.init(white: 1.0, alpha: 1.0)
         self.contentViewScaleValue = 0.9;
         self.scaleMenuView = false;
@@ -35,6 +33,5 @@ class ACResideRootVC: RESideMenu {
         self.contentViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabViewController")
         self.leftMenuViewController = self.storyboard?.instantiateViewController(withIdentifier: "ACPersonalCenter")
         ACResideRootVC.sharedResideRootVC = self
-//        self.acResideRootVC = self
     }
 }

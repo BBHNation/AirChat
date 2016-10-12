@@ -15,6 +15,7 @@
 		521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073CB1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift */; };
 		521073CE1DAB657000B3D127 /* ACResideRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073CD1DAB657000B3D127 /* ACResideRootVC.swift */; };
 		521073D01DAB659E00B3D127 /* ACPersonalCenterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073CF1DAB659E00B3D127 /* ACPersonalCenterTVC.swift */; };
+		521073D21DADC80C00B3D127 /* ACVisitingCardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073D11DADC80C00B3D127 /* ACVisitingCardDataModel.swift */; };
 		5297B2E41DA888A200AA241A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297B2E31DA888A200AA241A /* AppDelegate.swift */; };
 		5297B2E91DA888A200AA241A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2E71DA888A200AA241A /* Main.storyboard */; };
 		5297B2EB1DA888A200AA241A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2EA1DA888A200AA241A /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		521073CB1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		521073CD1DAB657000B3D127 /* ACResideRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACResideRootVC.swift; sourceTree = "<group>"; };
 		521073CF1DAB659E00B3D127 /* ACPersonalCenterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPersonalCenterTVC.swift; sourceTree = "<group>"; };
+		521073D11DADC80C00B3D127 /* ACVisitingCardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardDataModel.swift; sourceTree = "<group>"; };
 		5297B2E01DA888A200AA241A /* AirChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5297B2E31DA888A200AA241A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5297B2E81DA888A200AA241A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				521073CA1DAB3BB200B3D127 /* Views */,
 				521073C91DAB3BA900B3D127 /* Controllers */,
+				521073D31DADC81000B3D127 /* ACVisitingCardDataModel */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -129,6 +132,14 @@
 				521073CB1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		521073D31DADC81000B3D127 /* ACVisitingCardDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				521073D11DADC80C00B3D127 /* ACVisitingCardDataModel.swift */,
+			);
+			name = ACVisitingCardDataModel;
 			sourceTree = "<group>";
 		};
 		5297B2D71DA888A200AA241A = {
@@ -154,12 +165,12 @@
 			isa = PBXGroup;
 			children = (
 				5297B2E31DA888A200AA241A /* AppDelegate.swift */,
+				5297B2E71DA888A200AA241A /* Main.storyboard */,
 				521073B71DAA18D400B3D127 /* FrameWorks */,
 				5297B2F51DA88A5B00AA241A /* PersonalCenter */,
 				5297B2F61DA88A5B00AA241A /* Chat */,
 				5297B2F71DA88A5B00AA241A /* Documents */,
 				5297B2F81DA88A5B00AA241A /* VisitingCard */,
-				5297B2E71DA888A200AA241A /* Main.storyboard */,
 				5297B2EA1DA888A200AA241A /* Assets.xcassets */,
 				5297B2EC1DA888A200AA241A /* LaunchScreen.storyboard */,
 				5297B2EF1DA888A200AA241A /* Info.plist */,
@@ -354,6 +365,7 @@
 				521073C01DAA300900B3D127 /* UIImage+ACImagePlus.m in Sources */,
 				521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */,
 				521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */,
+				521073D21DADC80C00B3D127 /* ACVisitingCardDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

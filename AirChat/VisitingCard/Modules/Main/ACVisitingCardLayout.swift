@@ -9,6 +9,8 @@
 import UIKit
 
 class ACVisitingCardLayout: UICollectionViewFlowLayout {
+    var dateBefore:NSDate?
+    var contentOffSetY:CGFloat?
     override func prepare() {
         super.prepare()
         self.itemSize = CGSize.init(width: UIScreen.main.bounds.size.width-20, height: UIScreen.main.bounds.size.width*0.5)
@@ -18,31 +20,70 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
     }
 
     
+    //自定义布局
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        
         let array = super.layoutAttributesForElements(in: rect)
         let centetY = (self.collectionView?.contentOffset.y)! + (self.collectionView?.frame.height)!/2 - 50
-        
         for attrs:UICollectionViewLayoutAttributes in array! {
-            
             let delta = abs(attrs.center.y - centetY)//相对于collectionView中心点的偏移量
-            if delta<50 {
-                let row = ((self.collectionView?.contentOffset.y)! + 64)/self.itemSize.height
-                let introw = Int(row) + 1
-//                print("delta is: +  \(delta) + introw is: + \(introw) contentOffset is: \(self.collectionView?.contentOffset.y) row is: \(row)")
-                
-                let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
-                if (rowcell != nil){
-                    UIView.animate(withDuration: 0.5, animations: {
-                        self.collectionView?.backgroundColor = rowcell?.cardMostColor
-                    })
-                }
-            }
+
             let scale = 1 - (delta*0.7)/(self.collectionView?.frame.size.height)!
             attrs.transform = CGAffineTransform.init(scaleX: scale, y: scale)
-//            attrs.transform = CGAffineTransform.init(a: scale, b: 1-scale, c: -scale+1, d: scale, tx: 0, ty: 0)
         }
         return array;
+    }
+    
+    
+    
+    //根据时间来判断何时应该触发block
+    func startDoingWhenTimeMoreThan(date:NSDate,action:()->Void) {
+        //如果之前调用过此函数并且现在的时间大于之前的时间0.3秒，则调用block，因为滑动过快时候调用动画会阻隔用户手势
+        if (self.dateBefore != nil) && (date.timeIntervalSince1970-(self.dateBefore?.timeIntervalSince1970)!>0.3){
+            action()
+        }
+        self.dateBefore = date
+    }
+    
+    
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        //计算出最终显示的矩形框
+        var rect:CGRect = CGRect()
+        rect.origin.x=0
+        rect.origin.y = proposedContentOffset.y
+        rect.size = (self.collectionView?.frame.size)!
+        
+        
+        //获得size中已经布局好的属性
+        let attrs = super.layoutAttributesForElements(in: rect)
+        
+        //计算collectionView最中心点的Y值
+        let centerY = proposedContentOffset.y+(self.collectionView?.frame.size.height)! * 0.5 - 50
+        
+        // 存放最小的间距值
+        var minDelta:CGFloat = -1024
+        
+        //存放cell布局与collectionview中心点的距离
+        for attr:UICollectionViewLayoutAttributes in attrs! {
+            let delta = abs(attr.center.y-centerY)
+            if (minDelta == -1024){
+                minDelta = delta+1
+            }
+            if (abs(minDelta)>delta) {
+                minDelta = attr.center.y-centerY
+            }
+        }
+        let resultOffSet:CGPoint = CGPoint.init(x: proposedContentOffset.x, y: proposedContentOffset.y+minDelta)
+        let row = resultOffSet.y/self.itemSize.height
+        let introw = Int(row) + 1
+        let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
+        if (rowcell != nil){
+            self.startDoingWhenTimeMoreThan(date: NSDate(), action: {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.collectionView?.backgroundColor = rowcell?.cardMostColor
+                })
+            })
+        }
+        return resultOffSet
     }
     
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
