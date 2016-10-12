@@ -46,11 +46,22 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-zo-net">
+                                                    <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="aI3-FD-51i"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxw-YJ-bCW">
+                                                    <color key="backgroundColor" white="1" alpha="0.70178796140939592" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="hfG-2I-QcA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -82,6 +93,8 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="cardBackImage" destination="mHp-6E-pJ4" id="OYO-8d-zyS"/>
+                                            <outlet property="nameLabel" destination="8fi-zo-net" id="K70-oi-Ofh"/>
+                                            <outlet property="phoneNumLabel" destination="pxw-YJ-bCW" id="5gJ-jw-8aX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -112,6 +125,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ACCardCollectionView" destination="zIk-Cg-flw" id="OWQ-SD-JNT"/>
+                        <outlet property="mainCollectionView" destination="zIk-Cg-flw" id="Okn-xG-WxA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Emr-c8-Uma" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    @IBOutlet weak var mainCollectionView: UICollectionView!
     var dataModel:ACVisitingCardDataModel!
     @IBOutlet weak var ACCardCollectionView: UICollectionView!
     
@@ -32,31 +33,29 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         return 1
     }
     
+    //弹出左侧个人中心
     @IBAction func presentLeftMune(_ sender: AnyObject) {
         let rootVC = UIApplication.shared.keyWindow?.rootViewController as! ACResideRootVC
         rootVC.presentLeftMenuViewController()
     }
+    
+    
+    
+    
+    //collectionView data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataModel.cardCellArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ACVisitingCardCollectionViewCell
-        cell.cardBackImage.image = (dataModel.cardCellArray.object(at: indexPath.row) as! ACVisitingCardCellModel).backImage
-        cell.cardMostColor = (dataModel.cardCellArray.object(at: indexPath.row) as! ACVisitingCardCellModel).backImageMostColor
-        /*
-        if indexPath.row%2==0 {
-            cell.cardMostColor = UIColor.blue
-        }
-        else{
-            cell.cardMostColor = UIColor.gray
-        }
- */
+        
+        cell.cellModel = dataModel.cardCellArray.object(at: indexPath.row) as! ACVisitingCardCellModel
         return cell
     }
     
     
-    
+    //collectionView delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("select item at index \(indexPath.row)")
     }

@@ -23,7 +23,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
     //自定义布局
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let array = super.layoutAttributesForElements(in: rect)
-        let centetY = (self.collectionView?.contentOffset.y)! + (self.collectionView?.frame.height)!/2 - 50
+        let centetY = (self.collectionView?.contentOffset.y)! + (self.collectionView?.frame.height)!/2
         for attrs:UICollectionViewLayoutAttributes in array! {
             let delta = abs(attrs.center.y - centetY)//相对于collectionView中心点的偏移量
 
@@ -57,7 +57,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
         let attrs = super.layoutAttributesForElements(in: rect)
         
         //计算collectionView最中心点的Y值
-        let centerY = proposedContentOffset.y+(self.collectionView?.frame.size.height)! * 0.5 - 50
+        let centerY = proposedContentOffset.y+(self.collectionView?.frame.size.height)! * 0.5
         
         // 存放最小的间距值
         var minDelta:CGFloat = -1024
@@ -73,8 +73,15 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
             }
         }
         let resultOffSet:CGPoint = CGPoint.init(x: proposedContentOffset.x, y: proposedContentOffset.y+minDelta)
-        let row = resultOffSet.y/self.itemSize.height
-        let introw = Int(row) + 1
+        
+        
+        //通过最终的offset来计算当前应该是哪个cell，再设置背景颜色
+        var row = (resultOffSet.y+47.25)/(self.itemSize.height + 5)
+        if row<0 {
+            row = -1
+        }
+        let introw = Int(row)+1
+        print("int row is :\(introw) result off set is: \(resultOffSet) row is :\(row)")
         let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
         if (rowcell != nil){
             self.startDoingWhenTimeMoreThan(date: NSDate(), action: {
