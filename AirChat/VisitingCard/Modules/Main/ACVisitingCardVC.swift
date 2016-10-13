@@ -10,6 +10,7 @@ import UIKit
 
 class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
+    /// collectionView作为主界面
     @IBOutlet weak var mainCollectionView: UICollectionView!
     var dataModel:ACVisitingCardDataModel!
     @IBOutlet weak var ACCardCollectionView: UICollectionView!

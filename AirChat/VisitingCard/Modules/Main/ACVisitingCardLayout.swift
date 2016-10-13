@@ -76,12 +76,10 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
         
         
         //通过最终的offset来计算当前应该是哪个cell，再设置背景颜色
-        var row = (resultOffSet.y+47.25)/(self.itemSize.height + 5)
-        if row<0 {
-            row = -1
-        }
+//        var row = (resultOffSet.y+47.25)/(self.itemSize.height + 5)
+        var row = (resultOffSet.y+52.5)/(self.itemSize.height + 5)
         let introw = Int(row)+1
-        print("int row is :\(introw) result off set is: \(resultOffSet) row is :\(row)")
+        print("int row is :\(introw) result off set is: \(resultOffSet) row is :\(row) screen is :\(UIScreen.main.bounds) item Size is :\(self.itemSize.height)")
         let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
         if (rowcell != nil){
             self.startDoingWhenTimeMoreThan(date: NSDate(), action: {
