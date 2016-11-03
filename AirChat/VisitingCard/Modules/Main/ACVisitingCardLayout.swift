@@ -8,9 +8,15 @@
 
 import UIKit
 
+
+/// 这里是名片CollectinView的Layout方式
 class ACVisitingCardLayout: UICollectionViewFlowLayout {
+    
+    /// 这个date用来计算时间，如果快速滑动则不会更改名片背景图主要颜色
     var dateBefore:NSDate?
-    var contentOffSetY:CGFloat?
+    
+    
+    /// 准备，初始化Layout
     override func prepare() {
         super.prepare()
         self.itemSize = CGSize.init(width: UIScreen.main.bounds.size.width-20, height: UIScreen.main.bounds.size.width*0.5)
@@ -20,7 +26,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
     }
 
     
-    //自定义布局
+    /// 自定义布局
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let array = super.layoutAttributesForElements(in: rect)
         let centetY = (self.collectionView?.contentOffset.y)! + (self.collectionView?.frame.height)!/2
@@ -35,7 +41,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
     
     
     
-    //根据时间来判断何时应该触发block
+    /// 根据时间来判断何时应该触发block
     func startDoingWhenTimeMoreThan(date:NSDate,action:()->Void) {
         //如果之前调用过此函数并且现在的时间大于之前的时间0.3秒，则调用block，因为滑动过快时候调用动画会阻隔用户手势
         if (self.dateBefore != nil) && (date.timeIntervalSince1970-(self.dateBefore?.timeIntervalSince1970)!>0.3){
@@ -77,7 +83,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
         
         //通过最终的offset来计算当前应该是哪个cell，再设置背景颜色
 //        var row = (resultOffSet.y+47.25)/(self.itemSize.height + 5)
-        var row = (resultOffSet.y+52.5)/(self.itemSize.height + 5)
+        let row = (resultOffSet.y+52.5)/(self.itemSize.height + 5)
         let introw = Int(row)+1
         print("int row is :\(introw) result off set is: \(resultOffSet) row is :\(row) screen is :\(UIScreen.main.bounds) item Size is :\(self.itemSize.height)")
         let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
@@ -91,6 +97,8 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
         return resultOffSet
     }
     
+    
+    /// 每次松手时候计算
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true;
     }

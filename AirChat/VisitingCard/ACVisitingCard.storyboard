@@ -125,7 +125,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ACCardCollectionView" destination="zIk-Cg-flw" id="OWQ-SD-JNT"/>
-                        <outlet property="mainCollectionView" destination="zIk-Cg-flw" id="Okn-xG-WxA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Emr-c8-Uma" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,11 +8,13 @@
 
 import UIKit
 
+/// 这里是主界面，名片界面
 class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
-    /// collectionView作为主界面
-    @IBOutlet weak var mainCollectionView: UICollectionView!
+    /// 主界面所需要的数据模型
     var dataModel:ACVisitingCardDataModel!
+    
+    /// 使用CollectionView来布局名片
     @IBOutlet weak var ACCardCollectionView: UICollectionView!
     
     override func viewDidLoad() {
