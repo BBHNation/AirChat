@@ -42,9 +42,6 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         rootVC.presentLeftMenuViewController()
     }
     
-    
-    
-    
     //collectionView data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataModel.cardCellArray.count

@@ -23,6 +23,7 @@
 		5297B2FE1DA88CD200AA241A /* ACVisitingCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */; };
 		5297B3001DA88D6E00AA241A /* ACDocuments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */; };
 		5297B3021DA88D8100AA241A /* ACChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B3011DA88D8100AA241A /* ACChat.storyboard */; };
+		52E121DE1DDC5E7600576CE5 /* ACDocumentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACVisitingCard.storyboard; sourceTree = "<group>"; };
 		5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACDocuments.storyboard; sourceTree = "<group>"; };
 		5297B3011DA88D8100AA241A /* ACChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACChat.storyboard; sourceTree = "<group>"; };
+		52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentsVC.swift; sourceTree = "<group>"; };
 		9DAD75E9FAFA38EDC8955BC1 /* Pods-AirChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FD550DDC3DC122B7270C9D /* Pods-AirChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 		5297B2E21DA888A200AA241A /* AirChat */ = {
 			isa = PBXGroup;
 			children = (
+				52E121DA1DDC164E00576CE5 /* ConnectyModel */,
 				5297B2E31DA888A200AA241A /* AppDelegate.swift */,
 				5297B2E71DA888A200AA241A /* Main.storyboard */,
 				521073B71DAA18D400B3D127 /* FrameWorks */,
@@ -198,6 +201,7 @@
 		5297B2F71DA88A5B00AA241A /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				52E121DB1DDC5E2C00576CE5 /* Modules */,
 				5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */,
 			);
 			path = Documents;
@@ -210,6 +214,29 @@
 				5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */,
 			);
 			path = VisitingCard;
+			sourceTree = "<group>";
+		};
+		52E121DA1DDC164E00576CE5 /* ConnectyModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConnectyModel;
+			sourceTree = "<group>";
+		};
+		52E121DB1DDC5E2C00576CE5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				52E121DC1DDC5E4900576CE5 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		52E121DC1DDC5E4900576CE5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		7EA9FBABAF86A7983E653F45 /* Pods */ = {
@@ -362,6 +389,7 @@
 				521073D01DAB659E00B3D127 /* ACPersonalCenterTVC.swift in Sources */,
 				521073CE1DAB657000B3D127 /* ACResideRootVC.swift in Sources */,
 				521073C71DAB3B7700B3D127 /* ACVisitingCardLayout.swift in Sources */,
+				52E121DE1DDC5E7600576CE5 /* ACDocumentsVC.swift in Sources */,
 				521073C01DAA300900B3D127 /* UIImage+ACImagePlus.m in Sources */,
 				521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */,
 				521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */,

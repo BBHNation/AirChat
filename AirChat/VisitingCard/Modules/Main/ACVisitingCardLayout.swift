@@ -89,7 +89,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
         let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
         if (rowcell != nil){
             self.startDoingWhenTimeMoreThan(date: NSDate(), action: {
-                UIView.animate(withDuration: 0.5, animations: {
+                UIView.animate(withDuration: 0.2, animations: {
                     self.collectionView?.backgroundColor = rowcell?.cardMostColor
                 })
             })
