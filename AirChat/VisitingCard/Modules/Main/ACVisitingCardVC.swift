@@ -21,12 +21,18 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         super.viewDidLoad()
         dataModel = ACVisitingCardDataModel()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
+    /// 弹出左侧个人中心
+    @IBAction func presentLeftMune(_ sender: AnyObject) {
+        let rootVC = UIApplication.shared.keyWindow?.rootViewController as! ACResideRootVC
+        rootVC.presentLeftMenuViewController()
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -36,26 +42,21 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         return 1
     }
     
-    //弹出左侧个人中心
-    @IBAction func presentLeftMune(_ sender: AnyObject) {
-        let rootVC = UIApplication.shared.keyWindow?.rootViewController as! ACResideRootVC
-        rootVC.presentLeftMenuViewController()
-    }
+   
     
-    //collectionView data source
+    /// collectionView data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataModel.cardCellArray.count
     }
     
+    /// collectionView data source
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ACVisitingCardCollectionViewCell
-        
         cell.cellModel = dataModel.cardCellArray.object(at: indexPath.row) as! ACVisitingCardCellModel
         return cell
     }
     
-    
-    //collectionView delegate
+    /// collectionView delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("select item at index \(indexPath.row)")
     }

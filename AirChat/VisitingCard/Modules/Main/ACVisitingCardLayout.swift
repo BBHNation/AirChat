@@ -85,7 +85,7 @@ class ACVisitingCardLayout: UICollectionViewFlowLayout {
 //        var row = (resultOffSet.y+47.25)/(self.itemSize.height + 5)
         let row = (resultOffSet.y+52.5)/(self.itemSize.height + 5)
         let introw = Int(row)+1
-        print("int row is :\(introw) result off set is: \(resultOffSet) row is :\(row) screen is :\(UIScreen.main.bounds) item Size is :\(self.itemSize.height)")
+//        print("int row is :\(introw) result off set is: \(resultOffSet) row is :\(row) screen is :\(UIScreen.main.bounds) item Size is :\(self.itemSize.height)")
         let rowcell:ACVisitingCardCollectionViewCell? = self.collectionView!.cellForItem(at: NSIndexPath.init(row: introw, section: 0) as IndexPath) as? ACVisitingCardCollectionViewCell
         if (rowcell != nil){
             self.startDoingWhenTimeMoreThan(date: NSDate(), action: {

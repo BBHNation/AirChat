@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ACDocumentsVC: UIViewController {
+class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
     enum documentType {
         case Image
         case Vidio
@@ -16,22 +16,50 @@ class ACDocumentsVC: UIViewController {
     }
     
     var docType = documentType.Image//初始化
-    @IBOutlet weak var imageTableView: UITableView!
+    
+    @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var vidioTableView: UITableView!
     @IBOutlet weak var contactTableView: UITableView!
-    @IBOutlet weak var mainScrollView: UIScrollView!//装载三个tableView
+    
+    @IBOutlet weak var mainScrollView: UIScrollView!//装载三个View
     @IBOutlet weak var floatView: UIView!//滑动的View
     
     @IBOutlet weak var imageWidth: NSLayoutConstraint!
     @IBOutlet weak var vidioWidth: NSLayoutConstraint!
     @IBOutlet weak var contactWidth: NSLayoutConstraint!
     
+    
+    let imageDelegate = ACDocumentImagesDelegate()
+    let vedioDelegate = ACDocumentVidiosDelegate()
+    let contactDelegate = ACDocumentContactsDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageWidth.constant = UIScreen.main.bounds.size.width
         vidioWidth.constant = UIScreen.main.bounds.size.width
         contactWidth.constant = UIScreen.main.bounds.size.width
-        iamgeButtonClick(Any.self)
+        
+        
+        
+        //初始化协议
+        imageCollectionView.delegate = imageDelegate
+        imageCollectionView.dataSource = imageDelegate
+        
+        
+        //初始化vedio协议
+        vidioTableView.register(UINib(nibName: "ACDocumentVedioCell", bundle: nil), forCellReuseIdentifier: "VedioCell")
+        vidioTableView.rowHeight = 60
+        vidioTableView.delegate = vedioDelegate
+        vidioTableView.dataSource = vedioDelegate
+        
+        
+        //初始化contact协议
+        contactTableView.register(UINib(nibName: "ACDocumentContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
+        contactTableView.delegate = contactDelegate
+        contactTableView.dataSource = contactDelegate
+        
+        //这里初始化
+        self.mainScrollView.contentOffset = CGPoint(x: UIScreen.main.bounds.width, y: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,10 +74,7 @@ class ACDocumentsVC: UIViewController {
     /// - Parameter sender: 按钮
     @IBAction func iamgeButtonClick(_ sender: Any) {
         UIView.animate(withDuration: 0.4, animations: {
-            var rect = self.floatView.frame
-            rect.origin.x = UIScreen.main.bounds.size.width/6-rect.size.width/2
-            self.floatView.frame = rect
-            self.mainScrollView.contentOffset = CGPoint(x: 0, y: 0)
+           self.mainScrollView.contentOffset = CGPoint(x: 0, y: 0)
         })
     }
     
@@ -59,9 +84,6 @@ class ACDocumentsVC: UIViewController {
     /// - Parameter sender: 按钮
     @IBAction func vidioButtonClick(_ sender: Any) {
         UIView.animate(withDuration: 0.4, animations: {
-            var rect = self.floatView.frame
-            rect.origin.x = UIScreen.main.bounds.size.width/2-rect.size.width/2
-            self.floatView.frame = rect
             self.mainScrollView.contentOffset = CGPoint(x: UIScreen.main.bounds.size.width, y: 0)
         })
     }
@@ -72,10 +94,14 @@ class ACDocumentsVC: UIViewController {
     /// - Parameter sender: 按钮
     @IBAction func contactButtonClick(_ sender: Any) {
         UIView.animate(withDuration: 0.4, animations: {
-            var rect = self.floatView.frame
-            rect.origin.x = UIScreen.main.bounds.size.width*5/6-rect.size.width/2
-            self.floatView.frame = rect
             self.mainScrollView.contentOffset = CGPoint(x: UIScreen.main.bounds.size.width*2, y: 0)
         })
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x/UIScreen.main.bounds.size.width
+        var rect = self.floatView.frame
+        rect.origin.x = UIScreen.main.bounds.size.width/6-rect.size.width/2+UIScreen.main.bounds.size.width*x/3
+        self.floatView.frame = rect
     }
 }

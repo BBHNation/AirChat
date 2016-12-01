@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="jl9-E5-ncc">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jl9-E5-ncc" id="Myz-jm-z7w">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testBack3" translatesAutoresizingMaskIntoConstraints="NO" id="ied-Mh-QLl">
+                        <rect key="frame" x="17" y="4" width="89" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="W4J-H1-02h"/>
+                            <constraint firstAttribute="width" secondItem="ied-Mh-QLl" secondAttribute="height" multiplier="16:9" id="Xg9-wX-Jlo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016.11.25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ0-Cx-Q8r">
+                        <rect key="frame" x="252" y="18.5" width="110" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="kix-p4-ftM"/>
+                            <constraint firstAttribute="width" constant="110" id="oCz-FD-tyq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CJ0-Cx-Q8r" firstAttribute="centerY" secondItem="ied-Mh-QLl" secondAttribute="centerY" id="Wg6-2C-X8h"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CJ0-Cx-Q8r" secondAttribute="trailing" constant="5" id="csO-Ut-pRl"/>
+                    <constraint firstItem="ied-Mh-QLl" firstAttribute="leading" secondItem="Myz-jm-z7w" secondAttribute="leadingMargin" constant="9" id="lnc-cD-fMl"/>
+                    <constraint firstItem="ied-Mh-QLl" firstAttribute="centerY" secondItem="Myz-jm-z7w" secondAttribute="centerY" id="wmN-CL-XlA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-403.5" y="-144"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="testBack3" width="1920" height="1080"/>
+    </resources>
+</document>

@@ -23,6 +23,11 @@
 		5297B2FE1DA88CD200AA241A /* ACVisitingCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */; };
 		5297B3001DA88D6E00AA241A /* ACDocuments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */; };
 		5297B3021DA88D8100AA241A /* ACChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B3011DA88D8100AA241A /* ACChat.storyboard */; };
+		52BAD9EF1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAD9EE1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift */; };
+		52BAD9F11DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */; };
+		52BAD9F31DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */; };
+		52BAD9F51DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAD9F41DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift */; };
+		52BAD9F71DEFF86500F96CA6 /* ACDocumentContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BAD9F61DEFF86500F96CA6 /* ACDocumentContactCell.xib */; };
 		52E121DE1DDC5E7600576CE5 /* ACDocumentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACVisitingCard.storyboard; sourceTree = "<group>"; };
 		5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACDocuments.storyboard; sourceTree = "<group>"; };
 		5297B3011DA88D8100AA241A /* ACChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACChat.storyboard; sourceTree = "<group>"; };
+		52BAD9EE1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentImagesDelegate.swift; sourceTree = "<group>"; };
+		52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentVidiosDelegate.swift; sourceTree = "<group>"; };
+		52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACDocumentVedioCell.xib; sourceTree = "<group>"; };
+		52BAD9F41DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentContactsDelegate.swift; sourceTree = "<group>"; };
+		52BAD9F61DEFF86500F96CA6 /* ACDocumentContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACDocumentContactCell.xib; sourceTree = "<group>"; };
 		52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentsVC.swift; sourceTree = "<group>"; };
 		9DAD75E9FAFA38EDC8955BC1 /* Pods-AirChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FD550DDC3DC122B7270C9D /* Pods-AirChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +236,9 @@
 		52E121DB1DDC5E2C00576CE5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				52E121DF1DDD8BD000576CE5 /* Contacts */,
+				52E121E01DDD8BD000576CE5 /* Vidios */,
+				52E121E11DDD8BD000576CE5 /* Images */,
 				52E121DC1DDC5E4900576CE5 /* Main */,
 			);
 			path = Modules;
@@ -237,6 +250,32 @@
 				52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		52E121DF1DDD8BD000576CE5 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				52BAD9F41DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift */,
+				52BAD9F61DEFF86500F96CA6 /* ACDocumentContactCell.xib */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		52E121E01DDD8BD000576CE5 /* Vidios */ = {
+			isa = PBXGroup;
+			children = (
+				52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */,
+				52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */,
+			);
+			path = Vidios;
+			sourceTree = "<group>";
+		};
+		52E121E11DDD8BD000576CE5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				52BAD9EE1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		7EA9FBABAF86A7983E653F45 /* Pods */ = {
@@ -321,6 +360,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5297B2EE1DA888A200AA241A /* LaunchScreen.storyboard in Resources */,
+				52BAD9F71DEFF86500F96CA6 /* ACDocumentContactCell.xib in Resources */,
+				52BAD9F31DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib in Resources */,
 				5297B2EB1DA888A200AA241A /* Assets.xcassets in Resources */,
 				5297B3021DA88D8100AA241A /* ACChat.storyboard in Resources */,
 				5297B2E91DA888A200AA241A /* Main.storyboard in Resources */,
@@ -389,8 +430,11 @@
 				521073D01DAB659E00B3D127 /* ACPersonalCenterTVC.swift in Sources */,
 				521073CE1DAB657000B3D127 /* ACResideRootVC.swift in Sources */,
 				521073C71DAB3B7700B3D127 /* ACVisitingCardLayout.swift in Sources */,
+				52BAD9F11DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift in Sources */,
 				52E121DE1DDC5E7600576CE5 /* ACDocumentsVC.swift in Sources */,
 				521073C01DAA300900B3D127 /* UIImage+ACImagePlus.m in Sources */,
+				52BAD9F51DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift in Sources */,
+				52BAD9EF1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift in Sources */,
 				521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */,
 				521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */,
 				521073D21DADC80C00B3D127 /* ACVisitingCardDataModel.swift in Sources */,
