@@ -1,5 +1,6 @@
-# AirChat
+# AirChat   (Multipeer Connectivity)
 An iOS APP using blue tooth to chat and share documents
+
 
 ##features
 ####主要功能前提都在于主干网络切断的时候使用（通过蓝牙和WLAN实现）
