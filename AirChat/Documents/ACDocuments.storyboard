@@ -127,25 +127,36 @@
                                     </tableView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P0P-QH-rWh">
                                         <rect key="frame" x="0.0" y="0.0" width="119" height="510"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="119" id="clI-ys-TIY"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WRZ-wj-63w">
-                                            <size key="itemSize" width="95" height="95"/>
+                                            <size key="itemSize" width="100" height="120"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                            <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="IFj-lG-Skg">
-                                                <rect key="frame" x="12" y="5" width="95" height="95"/>
+                                                <rect key="frame" x="10" y="5" width="100" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" tag="1024" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0yT-W1-M4j">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                                        </imageView>
+                                                    </subviews>
                                                 </view>
                                                 <color key="backgroundColor" red="0.24584881626815627" green="0.80363281249999996" blue="0.38340148846297112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="0yT-W1-M4j" secondAttribute="trailing" id="jpk-J8-ryJ"/>
+                                                    <constraint firstItem="0yT-W1-M4j" firstAttribute="top" secondItem="IFj-lG-Skg" secondAttribute="top" id="qsX-PK-Wkk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0yT-W1-M4j" secondAttribute="bottom" id="uVl-v1-Vtg"/>
+                                                    <constraint firstItem="0yT-W1-M4j" firstAttribute="leading" secondItem="IFj-lG-Skg" secondAttribute="leading" id="yg1-DL-Sk0"/>
+                                                </constraints>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -188,11 +199,31 @@
                         <outlet property="mainScrollView" destination="Ub0-tZ-ZC5" id="KpR-YK-Jw8"/>
                         <outlet property="vidioTableView" destination="dZD-rc-gle" id="MiZ-Bt-XWb"/>
                         <outlet property="vidioWidth" destination="GCG-eU-oZp" id="3My-7j-g5n"/>
+                        <segue destination="2BV-aG-CtL" kind="show" identifier="playVedio" id="Qeg-nu-ULK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxQ-qc-HuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="565.60000000000002" y="89.505247376311857"/>
+        </scene>
+        <!--播放-->
+        <scene sceneID="hnk-SW-y56">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="2BV-aG-CtL" customClass="ACDocumentVidioPlayerVC" customModule="AirChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jJs-xr-ZZh"/>
+                        <viewControllerLayoutGuide type="bottom" id="pkp-Re-lhJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a3w-Mj-cK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="播放" id="70Q-E6-zV5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNp-FY-RDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="90"/>
         </scene>
     </scenes>
     <resources>

@@ -46,3 +46,41 @@ extension ACResideRootVC{
         }
     }
 }
+
+
+extension UIViewController{
+    func setTabBarVisible(visible:Bool, animated:Bool) {
+        if (tabBarIsVisible() == visible) { return }
+        let frame = self.tabBarController?.tabBar.frame
+        let offsetY = (visible ? CGFloat(0) : 49.0)
+        let duration:TimeInterval = (animated ? 0.3 : 0.0)
+        if frame != nil {
+            UIView.animate(withDuration: duration) {
+                self.tabBarController?.tabBar.frame = frame!.offsetBy(dx: 0, dy: offsetY)
+                return
+            }
+        }
+    }
+    
+    func tabBarIsVisible() ->Bool {
+        return (self.tabBarController?.tabBar.frame.origin.y)! < self.view.frame.maxY
+    }
+    
+    
+    func setNavBarVisible(visible:Bool, animated:Bool) {
+        if (navBarIsVisible() == visible) { return }
+        let frame = self.navigationController?.navigationBar.frame
+        let offsetY = (visible ? CGFloat(0) : -64.0)
+        let duration:TimeInterval = (animated ? 0.3 : 0.0)
+        if frame != nil {
+            UIView.animate(withDuration: duration) {
+                self.navigationController?.navigationBar.frame = frame!.offsetBy(dx: 0, dy: offsetY)
+                return
+            }
+        }
+    }
+    
+    func navBarIsVisible() ->Bool {
+        return (self.navigationController?.navigationBar.frame.origin.y)! > UIScreen.main.bounds.minY
+    }
+}

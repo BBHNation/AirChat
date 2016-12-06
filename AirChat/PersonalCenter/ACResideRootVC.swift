@@ -20,7 +20,7 @@ class ACResideRootVC: RESideMenu {
     }
     
     override func awakeFromNib(){
-        self.backgroundImage = UIImage.init(named: "testBack2")
+        self.backgroundImage = UIImage.init(named: "mainBack")
         self.contentViewShadowColor = UIColor.init(white: 1.0, alpha: 1.0)
         self.contentViewScaleValue = 0.9;
         self.scaleMenuView = false;

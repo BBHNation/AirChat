@@ -43,7 +43,7 @@ class ACVisitingCardDataModel: NSObject {
     override init(){
         self.cardCellArray = NSMutableArray()
         
-        cardCellArray.add(ACVisitingCardCellModel.initWithNil())
+//        cardCellArray.add(ACVisitingCardCellModel.initWithNil())
         for i in 0...20 {
             let cardCell:ACVisitingCardCellModel = ACVisitingCardCellModel()
             switch i%4 {

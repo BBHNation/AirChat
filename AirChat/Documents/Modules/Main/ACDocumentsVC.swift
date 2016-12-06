@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
     enum documentType {
@@ -33,6 +34,10 @@ class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
     let vedioDelegate = ACDocumentVidiosDelegate()
     let contactDelegate = ACDocumentContactsDelegate()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.hidesBarsOnTap = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageWidth.constant = UIScreen.main.bounds.size.width
@@ -40,17 +45,25 @@ class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
         contactWidth.constant = UIScreen.main.bounds.size.width
         
         
+        //初始化数据
+        ACDocumentsDataModel.sharedDataModel.getAllPhtotos()
+        ACDocumentsDataModel.sharedDataModel.getAllVedios()
         
-        //初始化协议
+        
+        //初始化图片collection协议
         imageCollectionView.delegate = imageDelegate
         imageCollectionView.dataSource = imageDelegate
         
         
         //初始化vedio协议
         vidioTableView.register(UINib(nibName: "ACDocumentVedioCell", bundle: nil), forCellReuseIdentifier: "VedioCell")
-        vidioTableView.rowHeight = 60
+        vidioTableView.rowHeight = 111
         vidioTableView.delegate = vedioDelegate
         vidioTableView.dataSource = vedioDelegate
+        vedioDelegate.tapBlock = { (senderItem)-> () in
+            self.navigationController?.hidesBarsOnTap = true
+            self.performSegue(withIdentifier: "playVedio", sender: senderItem)
+        }
         
         
         //初始化contact协议
@@ -103,5 +116,15 @@ class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
         var rect = self.floatView.frame
         rect.origin.x = UIScreen.main.bounds.size.width/6-rect.size.width/2+UIScreen.main.bounds.size.width*x/3
         self.floatView.frame = rect
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playVedio" {
+            let vedioPlayerVC = segue.destination as? ACDocumentVidioPlayerVC
+            vedioPlayerVC?.avplayerItem = sender as? AVPlayerItem
+            
+        }
     }
 }

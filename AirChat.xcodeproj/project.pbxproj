@@ -29,6 +29,8 @@
 		52BAD9F51DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAD9F41DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift */; };
 		52BAD9F71DEFF86500F96CA6 /* ACDocumentContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BAD9F61DEFF86500F96CA6 /* ACDocumentContactCell.xib */; };
 		52E121DE1DDC5E7600576CE5 /* ACDocumentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */; };
+		52EFDF791DF5283B007DE20E /* ACDocumentsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFDF781DF5283B007DE20E /* ACDocumentsDataModel.swift */; };
+		52EFDF7B1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFDF7A1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		52BAD9F41DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentContactsDelegate.swift; sourceTree = "<group>"; };
 		52BAD9F61DEFF86500F96CA6 /* ACDocumentContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACDocumentContactCell.xib; sourceTree = "<group>"; };
 		52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentsVC.swift; sourceTree = "<group>"; };
+		52EFDF781DF5283B007DE20E /* ACDocumentsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentsDataModel.swift; sourceTree = "<group>"; };
+		52EFDF7A1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentVidioPlayerVC.swift; sourceTree = "<group>"; };
 		9DAD75E9FAFA38EDC8955BC1 /* Pods-AirChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FD550DDC3DC122B7270C9D /* Pods-AirChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,7 @@
 			children = (
 				52E121DB1DDC5E2C00576CE5 /* Modules */,
 				5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */,
+				52EFDF781DF5283B007DE20E /* ACDocumentsDataModel.swift */,
 			);
 			path = Documents;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			children = (
 				52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */,
 				52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */,
+				52EFDF7A1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift */,
 			);
 			path = Vidios;
 			sourceTree = "<group>";
@@ -435,9 +441,11 @@
 				521073C01DAA300900B3D127 /* UIImage+ACImagePlus.m in Sources */,
 				52BAD9F51DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift in Sources */,
 				52BAD9EF1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift in Sources */,
+				52EFDF791DF5283B007DE20E /* ACDocumentsDataModel.swift in Sources */,
 				521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */,
 				521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */,
 				521073D21DADC80C00B3D127 /* ACVisitingCardDataModel.swift in Sources */,
+				52EFDF7B1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
