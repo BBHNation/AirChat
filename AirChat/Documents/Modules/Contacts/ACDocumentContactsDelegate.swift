@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Contacts
 
 class ACDocumentContactsDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return ACDocumentsDataModel.sharedDataModel.contactsArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -19,6 +20,11 @@ class ACDocumentContactsDelegate: NSObject, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
+        let nameLabel = cell.viewWithTag(1024) as? UILabel
+        let phoneLabel = cell.viewWithTag(1025) as? UILabel
+        let contact = ACDocumentsDataModel.sharedDataModel.contactsArray[indexPath.row] as? CNContact
+        nameLabel?.text = (contact?.givenName)! + (contact?.familyName)!
+        phoneLabel?.text = contact?.phoneNumbers.first?.value.stringValue
         return cell
     }
 }

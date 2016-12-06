@@ -216,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				52E121DB1DDC5E2C00576CE5 /* Modules */,
-				5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */,
 				52EFDF781DF5283B007DE20E /* ACDocumentsDataModel.swift */,
+				5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */,
 			);
 			path = Documents;
 			sourceTree = "<group>";
@@ -517,6 +517,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -559,6 +560,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

@@ -49,6 +49,8 @@ extension ACResideRootVC{
 
 
 extension UIViewController{
+    
+    /// 这里是隐藏tabBar和navBar的一些操作
     func setTabBarVisible(visible:Bool, animated:Bool) {
         if (tabBarIsVisible() == visible) { return }
         let frame = self.tabBarController?.tabBar.frame
@@ -62,11 +64,13 @@ extension UIViewController{
         }
     }
     
+    /// 这里是隐藏tabBar和navBar的一些操作
     func tabBarIsVisible() ->Bool {
         return (self.tabBarController?.tabBar.frame.origin.y)! < self.view.frame.maxY
     }
     
     
+    /// 这里是隐藏tabBar和navBar的一些操作
     func setNavBarVisible(visible:Bool, animated:Bool) {
         if (navBarIsVisible() == visible) { return }
         let frame = self.navigationController?.navigationBar.frame
@@ -80,6 +84,7 @@ extension UIViewController{
         }
     }
     
+    /// 这里是隐藏tabBar和navBar的一些操作
     func navBarIsVisible() ->Bool {
         return (self.navigationController?.navigationBar.frame.origin.y)! > UIScreen.main.bounds.minY
     }
