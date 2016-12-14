@@ -200,6 +200,10 @@ class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
     
     
     
+    @IBAction func popLeftPersonalCenter(_ sender: Any) {
+        let rootVC = UIApplication.shared.keyWindow?.rootViewController as! ACResideRootVC
+        rootVC.presentLeftMenuViewController()
+    }
     
     /// 跳转到其他界面
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

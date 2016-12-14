@@ -23,6 +23,11 @@
 		5297B2FE1DA88CD200AA241A /* ACVisitingCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */; };
 		5297B3001DA88D6E00AA241A /* ACDocuments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */; };
 		5297B3021DA88D8100AA241A /* ACChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B3011DA88D8100AA241A /* ACChat.storyboard */; };
+		52B8B21D1DF8FD9200155CFF /* ACChatListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8B21C1DF8FD9200155CFF /* ACChatListTVC.swift */; };
+		52B8B21F1DF933A000155CFF /* ACChatDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8B21E1DF933A000155CFF /* ACChatDetailVC.swift */; };
+		52B8B2211DF99BBD00155CFF /* ACChatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8B2201DF99BBD00155CFF /* ACChatDataModel.swift */; };
+		52B8B2251DF99BF100155CFF /* ACChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8B2231DF99BF100155CFF /* ACChatCell.swift */; };
+		52B8B2261DF99BF100155CFF /* ACChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B8B2241DF99BF100155CFF /* ACChatCell.xib */; };
 		52BAD9EF1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAD9EE1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift */; };
 		52BAD9F11DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */; };
 		52BAD9F31DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */; };
@@ -55,6 +60,11 @@
 		5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACVisitingCard.storyboard; sourceTree = "<group>"; };
 		5297B2FF1DA88D6E00AA241A /* ACDocuments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACDocuments.storyboard; sourceTree = "<group>"; };
 		5297B3011DA88D8100AA241A /* ACChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ACChat.storyboard; sourceTree = "<group>"; };
+		52B8B21C1DF8FD9200155CFF /* ACChatListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACChatListTVC.swift; sourceTree = "<group>"; };
+		52B8B21E1DF933A000155CFF /* ACChatDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACChatDetailVC.swift; sourceTree = "<group>"; };
+		52B8B2201DF99BBD00155CFF /* ACChatDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACChatDataModel.swift; sourceTree = "<group>"; };
+		52B8B2231DF99BF100155CFF /* ACChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACChatCell.swift; sourceTree = "<group>"; };
+		52B8B2241DF99BF100155CFF /* ACChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACChatCell.xib; sourceTree = "<group>"; };
 		52BAD9EE1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentImagesDelegate.swift; sourceTree = "<group>"; };
 		52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentVidiosDelegate.swift; sourceTree = "<group>"; };
 		52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACDocumentVedioCell.xib; sourceTree = "<group>"; };
@@ -208,6 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				5297B3011DA88D8100AA241A /* ACChat.storyboard */,
+				52B8B2271DF99BF600155CFF /* Views */,
+				52B8B2221DF99BD100155CFF /* Controllers */,
+				52B8B2201DF99BBD00155CFF /* ACChatDataModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -229,6 +242,24 @@
 				5297B2FD1DA88CD200AA241A /* ACVisitingCard.storyboard */,
 			);
 			path = VisitingCard;
+			sourceTree = "<group>";
+		};
+		52B8B2221DF99BD100155CFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52B8B21C1DF8FD9200155CFF /* ACChatListTVC.swift */,
+				52B8B21E1DF933A000155CFF /* ACChatDetailVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52B8B2271DF99BF600155CFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52B8B2231DF99BF100155CFF /* ACChatCell.swift */,
+				52B8B2241DF99BF100155CFF /* ACChatCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		52E121DA1DDC164E00576CE5 /* ConnectyModel */ = {
@@ -368,6 +399,7 @@
 				5297B2EE1DA888A200AA241A /* LaunchScreen.storyboard in Resources */,
 				52BAD9F71DEFF86500F96CA6 /* ACDocumentContactCell.xib in Resources */,
 				52BAD9F31DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib in Resources */,
+				52B8B2261DF99BF100155CFF /* ACChatCell.xib in Resources */,
 				5297B2EB1DA888A200AA241A /* Assets.xcassets in Resources */,
 				5297B3021DA88D8100AA241A /* ACChat.storyboard in Resources */,
 				5297B2E91DA888A200AA241A /* Main.storyboard in Resources */,
@@ -432,7 +464,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5297B2E41DA888A200AA241A /* AppDelegate.swift in Sources */,
+				52B8B21F1DF933A000155CFF /* ACChatDetailVC.swift in Sources */,
 				521073BC1DAA2D4900B3D127 /* ACOverallTools.swift in Sources */,
+				52B8B2211DF99BBD00155CFF /* ACChatDataModel.swift in Sources */,
 				521073D01DAB659E00B3D127 /* ACPersonalCenterTVC.swift in Sources */,
 				521073CE1DAB657000B3D127 /* ACResideRootVC.swift in Sources */,
 				521073C71DAB3B7700B3D127 /* ACVisitingCardLayout.swift in Sources */,
@@ -442,8 +476,10 @@
 				52BAD9F51DEFF84F00F96CA6 /* ACDocumentContactsDelegate.swift in Sources */,
 				52BAD9EF1DEFE9F000F96CA6 /* ACDocumentImagesDelegate.swift in Sources */,
 				52EFDF791DF5283B007DE20E /* ACDocumentsDataModel.swift in Sources */,
+				52B8B21D1DF8FD9200155CFF /* ACChatListTVC.swift in Sources */,
 				521073C81DAB3B7700B3D127 /* ACVisitingCardVC.swift in Sources */,
 				521073CC1DAB3E2600B3D127 /* ACVisitingCardCollectionViewCell.swift in Sources */,
+				52B8B2251DF99BF100155CFF /* ACChatCell.swift in Sources */,
 				521073D21DADC80C00B3D127 /* ACVisitingCardDataModel.swift in Sources */,
 				52EFDF7B1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift in Sources */,
 			);

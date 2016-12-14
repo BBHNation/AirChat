@@ -189,7 +189,13 @@
                             <constraint firstAttribute="trailing" secondItem="Tbk-JN-AqE" secondAttribute="trailing" id="wDw-wH-UQo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="文件" id="hAU-eC-3Hh"/>
+                    <navigationItem key="navigationItem" title="文件" id="hAU-eC-3Hh">
+                        <barButtonItem key="leftBarButtonItem" image="PersonalCenter" id="pVo-oG-oNt">
+                            <connections>
+                                <action selector="popLeftPersonalCenter:" destination="fNw-5P-Abs" id="SRJ-0l-Yt1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contactTableView" destination="lzl-lm-USV" id="k05-b6-rrw"/>
                         <outlet property="contactWidth" destination="74y-rk-Tov" id="91S-ap-I5R"/>
@@ -228,5 +234,6 @@
     </scenes>
     <resources>
         <image name="Documents" width="30" height="30"/>
+        <image name="PersonalCenter" width="30" height="30"/>
     </resources>
 </document>
