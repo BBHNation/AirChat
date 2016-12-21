@@ -27,4 +27,9 @@ class ACDocumentContactsDelegate: NSObject, UITableViewDelegate, UITableViewData
         phoneLabel?.text = contact?.phoneNumbers.first?.value.stringValue
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
 }

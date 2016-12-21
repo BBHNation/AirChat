@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ACPersonalCenterTVC: UITableViewController {
+class ACPersonalCenterTVC: UITableViewController{
 
     @IBOutlet weak var headImageView: UIImageView!
     override func viewDidLoad() {
@@ -22,5 +22,16 @@ class ACPersonalCenterTVC: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            ACConnectyModel.sharedModel.startConnect(viewController: self)
+        }
+        else if indexPath.row == 2 {
+            let data = NSData()
+            ACConnectyModel.sharedModel.sendDataWith(data: data)
+        }
+    }
+    
 
 }

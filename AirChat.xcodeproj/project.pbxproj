@@ -16,6 +16,7 @@
 		521073CE1DAB657000B3D127 /* ACResideRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073CD1DAB657000B3D127 /* ACResideRootVC.swift */; };
 		521073D01DAB659E00B3D127 /* ACPersonalCenterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073CF1DAB659E00B3D127 /* ACPersonalCenterTVC.swift */; };
 		521073D21DADC80C00B3D127 /* ACVisitingCardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521073D11DADC80C00B3D127 /* ACVisitingCardDataModel.swift */; };
+		524655361E0A6F0D00AFD8D5 /* ACDocumentVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524655351E0A6F0D00AFD8D5 /* ACDocumentVedioCell.swift */; };
 		5297B2E41DA888A200AA241A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297B2E31DA888A200AA241A /* AppDelegate.swift */; };
 		5297B2E91DA888A200AA241A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2E71DA888A200AA241A /* Main.storyboard */; };
 		5297B2EB1DA888A200AA241A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5297B2EA1DA888A200AA241A /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		52E121DE1DDC5E7600576CE5 /* ACDocumentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */; };
 		52E604431E0A208000E39B6A /* LoginTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E604421E0A208000E39B6A /* LoginTVC.swift */; };
 		52E604451E0A209400E39B6A /* Login&Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E604441E0A209400E39B6A /* Login&Register.storyboard */; };
+		52E604471E0A364700E39B6A /* ACConnectyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E604461E0A364700E39B6A /* ACConnectyModel.swift */; };
 		52EFDF791DF5283B007DE20E /* ACDocumentsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFDF781DF5283B007DE20E /* ACDocumentsDataModel.swift */; };
 		52EFDF7B1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFDF7A1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,7 @@
 		521073CD1DAB657000B3D127 /* ACResideRootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACResideRootVC.swift; sourceTree = "<group>"; };
 		521073CF1DAB659E00B3D127 /* ACPersonalCenterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPersonalCenterTVC.swift; sourceTree = "<group>"; };
 		521073D11DADC80C00B3D127 /* ACVisitingCardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACVisitingCardDataModel.swift; sourceTree = "<group>"; };
+		524655351E0A6F0D00AFD8D5 /* ACDocumentVedioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentVedioCell.swift; sourceTree = "<group>"; };
 		5297B2E01DA888A200AA241A /* AirChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5297B2E31DA888A200AA241A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5297B2E81DA888A200AA241A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		52E121DD1DDC5E7600576CE5 /* ACDocumentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentsVC.swift; sourceTree = "<group>"; };
 		52E604421E0A208000E39B6A /* LoginTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTVC.swift; sourceTree = "<group>"; };
 		52E604441E0A209400E39B6A /* Login&Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Login&Register.storyboard"; sourceTree = "<group>"; };
+		52E604461E0A364700E39B6A /* ACConnectyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACConnectyModel.swift; sourceTree = "<group>"; };
 		52EFDF781DF5283B007DE20E /* ACDocumentsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentsDataModel.swift; sourceTree = "<group>"; };
 		52EFDF7A1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACDocumentVidioPlayerVC.swift; sourceTree = "<group>"; };
 		9DAD75E9FAFA38EDC8955BC1 /* Pods-AirChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirChat/Pods-AirChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 		52E121DA1DDC164E00576CE5 /* ConnectyModel */ = {
 			isa = PBXGroup;
 			children = (
+				52E604461E0A364700E39B6A /* ACConnectyModel.swift */,
 			);
 			path = ConnectyModel;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				52BAD9F01DEFF08200F96CA6 /* ACDocumentVidiosDelegate.swift */,
+				524655351E0A6F0D00AFD8D5 /* ACDocumentVedioCell.swift */,
 				52BAD9F21DEFF1EF00F96CA6 /* ACDocumentVedioCell.xib */,
 				52EFDF7A1DF65FD6007DE20E /* ACDocumentVidioPlayerVC.swift */,
 			);
@@ -478,9 +484,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524655361E0A6F0D00AFD8D5 /* ACDocumentVedioCell.swift in Sources */,
 				5297B2E41DA888A200AA241A /* AppDelegate.swift in Sources */,
 				52B8B21F1DF933A000155CFF /* ACChatDetailVC.swift in Sources */,
 				521073BC1DAA2D4900B3D127 /* ACOverallTools.swift in Sources */,
+				52E604471E0A364700E39B6A /* ACConnectyModel.swift in Sources */,
 				52B8B2211DF99BBD00155CFF /* ACChatDataModel.swift in Sources */,
 				521073D01DAB659E00B3D127 /* ACPersonalCenterTVC.swift in Sources */,
 				521073CE1DAB657000B3D127 /* ACResideRootVC.swift in Sources */,

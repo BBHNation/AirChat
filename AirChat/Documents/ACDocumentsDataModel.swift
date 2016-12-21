@@ -19,6 +19,7 @@ class ACDocumentsDataModel: NSObject, PHPhotoLibraryChangeObserver{
     
     
     
+    
     /// 初始化信息
     override init() {
         allPhotos = PHFetchResult()

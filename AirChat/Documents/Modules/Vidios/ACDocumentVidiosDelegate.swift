@@ -35,7 +35,10 @@ class ACDocumentVidiosDelegate: NSObject, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         /// 重用Cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VedioCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VedioCell", for: indexPath) as! ACDocumentVedioCell
+        
+        /// 传递信息
+        cell.vedioAsset = ACDocumentsDataModel.sharedDataModel.allVedios[indexPath.row]
         
         /// 获取Cell中的图片
         let cellImage = cell.viewWithTag(1024) as! UIImageView
@@ -84,5 +87,12 @@ class ACDocumentVidiosDelegate: NSObject, UITableViewDataSource, UITableViewDele
                 }
             })
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
     }
 }
