@@ -9,9 +9,14 @@
 import UIKit
 import Photos
 import AVKit
+import SVProgressHUD
 
 
 class ACDocumentVidiosDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
+    
+    /// 测试window
+    var mywindow:UIWindow?
+    var rootWindow = UIApplication.shared.keyWindow
     
     
     
@@ -23,6 +28,25 @@ class ACDocumentVidiosDelegate: NSObject, UITableViewDataSource, UITableViewDele
     
     /// 存储操作请求
     static let requestArray = NSMutableArray()
+    
+    var timer:Timer?
+    
+    
+    
+    func add() {
+        mywindow = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        mywindow?.windowLevel = UIWindowLevelAlert+1
+        mywindow?.backgroundColor = UIColor.clear
+        mywindow?.makeKeyAndVisible()
+    }
+    
+    func remove() {
+        mywindow?.isHidden = true
+        mywindow = nil
+        rootWindow?.makeKeyAndVisible()
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ACDocumentsDataModel.sharedDataModel.allVedios.count
@@ -39,6 +63,22 @@ class ACDocumentVidiosDelegate: NSObject, UITableViewDataSource, UITableViewDele
         
         /// 传递信息
         cell.vedioAsset = ACDocumentsDataModel.sharedDataModel.allVedios[indexPath.row]
+        cell.shareActionBloc = {
+            progress in
+            tableView.superview?.isUserInteractionEnabled = false
+            self.timer = Timer(timeInterval: 1, repeats: true, block: { (timer) in
+                print(progress.completedUnitCount*100/progress.totalUnitCount)
+                SVProgressHUD.showProgress(Float(progress.completedUnitCount)/Float(progress.totalUnitCount), status: "正在传输中...")
+                if (progress.completedUnitCount==progress.totalUnitCount) {
+                    SVProgressHUD.showSuccess(withStatus: "传输成功")
+                    self.remove()
+                    tableView.superview?.isUserInteractionEnabled = true
+                    self.timer?.invalidate()
+                }
+            })
+            RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
+            self.add()
+        }
         
         /// 获取Cell中的图片
         let cellImage = cell.viewWithTag(1024) as! UIImageView

@@ -10,15 +10,17 @@
 
 import UIKit
 import Photos
-import MultipeerConnectivity
+import MultipeerConnectivity//连接的主要框架
+import SVProgressHUD
 
 class ACConnectyModel: NSObject, MCBrowserViewControllerDelegate, MCSessionDelegate {
-    static let sharedModel = ACConnectyModel()
-    var browserVC : MCBrowserViewController?
-    var advertiser : MCAdvertiserAssistant?
-    var connectSession : MCSession?
-    var connectPeerID : MCPeerID?
-
+    static let sharedModel = ACConnectyModel()//单例模式
+    var browserVC : MCBrowserViewController?//选择连接的界面
+    var advertiser : MCAdvertiserAssistant?//广播
+    var connectSession : MCSession?//连接的Session
+    var connectPeerID : MCPeerID?//本机的连接ID
+    
+    /// 初始化
     override init() {
         //Setup peer ID
         connectPeerID = MCPeerID(displayName: UIDevice.current.name)
@@ -26,27 +28,28 @@ class ACConnectyModel: NSObject, MCBrowserViewControllerDelegate, MCSessionDeleg
         //Setup session
         connectSession = MCSession(peer: connectPeerID!)
         
-        
         //Setup BrowserViewController
         browserVC = MCBrowserViewController(serviceType: "airChat", session: connectSession!)
-        
         
         //Setup Advertiser
         advertiser = MCAdvertiserAssistant(serviceType: "airChat", discoveryInfo: nil, session: connectSession!)
         
     }
     
-    
+    /// 设置协议
     func setDelegate() {
         connectSession?.delegate = self
         browserVC?.delegate = self;
     }
     
+    /// 开始广播
     func startAdvertise() {
         //Start advertise
         advertiser?.start()
     }
     
+    
+    /// 发送一组Data
     func sendDataWith(data:NSData) {
         let string = "hello world";
         let stringData = string.data(using: String.Encoding.utf8)
@@ -57,10 +60,13 @@ class ACConnectyModel: NSObject, MCBrowserViewControllerDelegate, MCSessionDeleg
     }
     
     
-    func sendFileWith(url:URL) {
+    /// 根据本地URL发送文件
+    func sendFileWith(url:URL) -> Progress {
         let progress = connectSession?.sendResource(at: url, withName: "vedio", toPeer: (connectSession?.connectedPeers.first)!, withCompletionHandler: { (error) in
             print("传输完毕")
+            //这里发通知
         })
+        return progress!
     }
     
     /// 弹出连接界面
@@ -131,6 +137,7 @@ class ACConnectyModel: NSObject, MCBrowserViewControllerDelegate, MCSessionDeleg
         }) { (success, error) in
             if success {
                 print("接受到成功")
+                SVProgressHUD.showSuccess(withStatus: "传输成功")
             }
             else {
                 print("接受失败，错误是\(error)")

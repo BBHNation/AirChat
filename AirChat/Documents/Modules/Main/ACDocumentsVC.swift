@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import MJRefresh
-import KVOController
+
 
 
 
@@ -85,7 +85,7 @@ class ACDocumentsVC: UIViewController,UIScrollViewDelegate {
         vidioTableView.rowHeight = 111
         vidioTableView.delegate = vedioDelegate
         vidioTableView.dataSource = vedioDelegate
-        /// 添加下拉刷新
+        /// 点击分享后的Block
         vedioDelegate.tapBlock = { (senderItem)-> () in
             self.navigationController?.hidesBarsOnTap = true
             self.performSegue(withIdentifier: "playVedio", sender: senderItem)

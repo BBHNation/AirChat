@@ -9,9 +9,12 @@
 import UIKit
 import Photos
 
+typealias shareFuncBlock = (_ progress:Progress)->Void
+
 class ACDocumentVedioCell: UITableViewCell {
 
     var vedioAsset:PHAsset?
+    var shareActionBloc:shareFuncBlock?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +30,8 @@ class ACDocumentVedioCell: UITableViewCell {
         if (vedioAsset != nil) {
             PHCachingImageManager.default().requestAVAsset(forVideo: vedioAsset!, options: nil, resultHandler: { (asset, audioMix, _) in
                 let avurlAsset = asset as! AVURLAsset
-                ACConnectyModel.sharedModel.sendFileWith(url: avurlAsset.url)
+                let progress = ACConnectyModel.sharedModel.sendFileWith(url: avurlAsset.url)
+                self.shareActionBloc!(progress)
             })
         }
     }
