@@ -50,12 +50,12 @@ class ACConnectyModel: NSObject, MCBrowserViewControllerDelegate, MCSessionDeleg
     
     
     /// 发送一组Data
-    func sendDataWith(data:NSData) {
-        let string = "hello world";
-        let stringData = string.data(using: String.Encoding.utf8)
+    func sendDataWith(data:Data) {
         do {
-            try?
-            connectSession?.send(stringData!, toPeers: (connectSession?.connectedPeers)!, with: MCSessionSendDataMode.reliable)
+            try connectSession?.send(data as Data, toPeers: (connectSession?.connectedPeers)!, with: MCSessionSendDataMode.reliable)
+        }
+        catch {
+            SVProgressHUD.showError(withStatus: "传送失败")
         }
     }
     
@@ -110,8 +110,14 @@ class ACConnectyModel: NSObject, MCBrowserViewControllerDelegate, MCSessionDeleg
     
     /// MCSessionDelegate
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        let newString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-        print("data string is : \(newString)")
+        let dic = NSKeyedUnarchiver.unarchiveObject(with: data) as! NSDictionary
+        if (dic["type"] as! String)=="card" {
+            //是名片
+            //保存这个名片
+            let contentDic = dic["content"] as! NSDictionary
+            print("名字是：\(contentDic["name"])，手机号是：\(contentDic["phone"])")
+            SVProgressHUD.showSuccess(withStatus: "获取名片成功")
+        }
     }
     
     /// MCSessionDelegate

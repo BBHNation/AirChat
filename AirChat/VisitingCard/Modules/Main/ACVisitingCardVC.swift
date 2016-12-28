@@ -20,6 +20,11 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         dataModel = ACVisitingCardDataModel()
+        if true {
+            //没有登录时候走这里
+            self.performSegue(withIdentifier: "login", sender: self)
+        }
+        
     }
     
 
@@ -61,6 +66,13 @@ class ACVisitingCardVC: UIViewController,UICollectionViewDataSource,UICollection
         print("select item at index \(indexPath.row)")
     }
     
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (identifier=="login") {
+           
+        }
+        return true
+    }
     
 
 }

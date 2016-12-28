@@ -38,6 +38,7 @@ class ACVisitingCardCollectionViewCell: UICollectionViewCell {
             cardBackImage.layer.shadowColor = UIColor.black.cgColor
             cardBackImage.layer.shadowOpacity = 1
             cardBackImage.layer.shadowOffset = CGSize.init(width: 3, height: 3)
+            cardBackImage.layer.cornerRadius = 10
         }
     }
     

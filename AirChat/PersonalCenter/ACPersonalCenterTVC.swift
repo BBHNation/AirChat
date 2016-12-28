@@ -25,11 +25,21 @@ class ACPersonalCenterTVC: UITableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 1 {
+            //连接
             ACConnectyModel.sharedModel.startConnect(viewController: self)
         }
         else if indexPath.row == 2 {
-            let data = NSData()
-            ACConnectyModel.sharedModel.sendDataWith(data: data)
+            //我的名片
+            let storyBoard = UIStoryboard.init(name: "ACMyCard", bundle: Bundle.main)
+            let viewController = storyBoard.instantiateInitialViewController()
+            self.present(viewController!, animated: true, completion: nil)
+        }
+        else if indexPath.row == 3 {
+            //登出
+            //进入登录界面
+            let storyBoard = UIStoryboard.init(name: "ACLogin&Register", bundle: Bundle.main)
+            let viewController = storyBoard.instantiateInitialViewController()
+            self.present(viewController!, animated: true, completion: nil)
         }
     }
     
